@@ -98,6 +98,30 @@ function redirectToFB() {
     window.location.href = "https://www.facebook.com/p/916Dumpruns-61558061439891/";
 }
 
+function goToHome() {
+    window.location.href = "#home";
+}
+
+function goToServicesOffered() {
+    window.location.href = "#servicesOffered";
+}
+
+function goToRental() {
+    window.location.href = "#rental";
+}
+
+function goToPastJobs() {
+    window.location.href = "#pastJobs";
+}
+
+function goToLocations() {
+    window.location.href = "#locations";
+}
+
+function goToContact() {
+    window.location.href = "#contact";
+}
+
 
 
 // Locations Of Service
@@ -131,7 +155,20 @@ locations.forEach(function (location) {
 });
 
 
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
+        const target = document.querySelector(this.getAttribute('href'));
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
 
 // Function to create and inject SVG into the parent elements
