@@ -30,9 +30,9 @@
         <div class="rightSideHeader">
             <li class="size440 phone" onclick="callPhoneNumber()" href="tel:9167671869"><i
                     class="fa-solid fa-xl fa-phone  phone-icon" style="color: #ffffff;"></i></li>
-            <li class="webVersionLi awesome-link nav_link">Home</li>
-            <li class="webVersionLi awesome-link nav_link">Services</li>
-            <li class="webVersionLi awesome-link nav_link">Areas</li>
+                    <li class="webVersionLi awesome-link nav_link" onclick="goToServicesOffered()">Services</li>
+                    <li class="webVersionLi awesome-link nav_link" onclick="goToLocations()">Areas</li>
+                    <li class="webVersionLi awesome-link nav_link" onclick="goToRental()">Rentals</li>
             <button class="webVersionBu nav_link" onclick="callPhoneNumber()">Contact Us</button>
         </div>
         <div class="menu__backdrop">
@@ -332,7 +332,7 @@
                 </div>
                 <div class="sideTwo">
                     <h4 class="sideTwoText">Email Us</h4>
-                    <h3 class="phoneNumberIT">916dumpruns@gmail.com</h3>
+                    <h3 class="phoneNumberIT"><a href="mailto:916dumpruns@gmail.com">916dumpruns@gmail.com</a></h3>
                 </div>
             </div>
 
@@ -364,16 +364,16 @@
         <div class="containerFooter">
             <h2 class="footerLink">Links</h2>
         </div>
-        <li class="linkfooter ">Services</li>
-        <li class="linkfooter ">Coverage</li>
-        <li class="linkfooter ">Rentals</li>
-        <li class="linkfooter ">Contact Us</li>
+        <li class="linkfooter " onclick="goToServicesOffered()"> Services</li>
+        <li class="linkfooter "onclick="goToLocations()">Locations</li>
+        <li class="linkfooter" onclick = "goToRental()">Rentals</li>
+        <li class="linkfooter " onclick=" goToContact()">Contact Us</li>
 
         <div class="copywright">
             <h3 class="copywrightText">© 2024 916DumpRuns.com</h3>
         </div>
     </footer>
-
+    
 
     <!-- WEBVERSION -->
 
