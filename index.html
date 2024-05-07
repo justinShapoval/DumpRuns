@@ -19,9 +19,10 @@
     <!-- PHONEVERSION -->
 
     <!-- HEADER 1 PHONE -->
-    <header class="header">
+    <header class="header" id="#home">
         <div class="leftSideHeader">
-            <li class="size440 bars"><i class="fa-solid fa-xl fa-bars" style="color: #ffffff;"></i></li>
+            <li onclick="openMenu()" class="size440 bars btn__menu"><i class="fa-solid fa-xl fa-bars"
+                    style="color: #ffffff;"></i></li>
         </div>
         <div class="midHeader">
             <img class="headerlogo" src="./asstes/images/justinLogo.PNG" alt="">
@@ -29,10 +30,29 @@
         <div class="rightSideHeader">
             <li class="size440 phone" onclick="callPhoneNumber()" href="tel:9167671869"><i
                     class="fa-solid fa-xl fa-phone  phone-icon" style="color: #ffffff;"></i></li>
-            <li class="webVersionLi awesome-link">Home</li>
-            <li class="webVersionLi awesome-link">Services</li>
-            <li class="webVersionLi awesome-link">Areas</li>
-            <button class="webVersionBu">Contact Us</button>
+            <li class="webVersionLi awesome-link nav_link">Home</li>
+            <li class="webVersionLi awesome-link nav_link">Services</li>
+            <li class="webVersionLi awesome-link nav_link">Areas</li>
+            <button class="webVersionBu nav_link" onclick="callPhoneNumber()">Contact Us</button>
+        </div>
+        <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <i class="fa-solid fa-xl fa-times"></i>
+            </button>
+
+            <ul class="menu__links">
+                <li class="menu__list"><a href="#home" class="menu__link" onclick="closeMenu()">Home</a></li>
+                <li class="menu__list"><a href="#servicesOffered" class="menu__link" onclick="closeMenu()">Services We
+                        Offer</a></li>
+                <li class="menu__list"><a href="#rental" class="menu__link" onclick="closeMenu()">Dumpster Rental</a>
+                </li>
+                <li class="menu__list"><a href="#pastJobs" class="menu__link" onclick="closeMenu()">Our Past Jobs</a>
+                </li>
+                <li class="menu__list"><a href="#locations" class="menu__link" onclick="closeMenu()">Locations</a></li>
+                <li class="menu__list "><a href="#contact" class="menu__link-primary" onclick="closeMenu()">Contact
+                        Us</a>
+                </li>
+            </ul>
         </div>
     </header>
 
@@ -41,11 +61,11 @@
         <h1 class="heroTitle span ">Best Junk Removal In The Valley! </h1>
         <p class="heroPara">Whether you're cleaning up, relocating, or creating space for new finds you can count on us
             to haul away anything from your <span id="my_box"></span>.</p>
-        <button class="actionButton">Get Rid Of My Junk</button>
+        <button class="actionButton" onclick="callPhoneNumber()">Get Rid Of My Junk</button>
     </section>
 
     <!-- SECTION 2 PHONE -->
-    <section class="section2">
+    <section class="section2" id="servicesOffered">
         <h1 class="section2Head">Services We Offer</h1>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -168,7 +188,7 @@
 
     </section>
 
-    <section class="section3">
+    <section class="section3" id="rental">
         <h1 class="section3Heading">Affordable Dumpster Rentals</h1>
         <p class="rentalText">Rent a dumpster for hassle-free cleanup. Load it up, and we'll handle the disposal.
             Perfect for home renovations, decluttering, and construction projects.</p>
@@ -184,12 +204,12 @@
             <h2 class="pricingText">$250 <span class="beforePrice">$349</span></h2>
         </div>
 
-        <button class="rentNowButton">Rent Now</button>
+        <button class="rentNowButton" onclick="callPhoneNumber()">Rent Now</button>
     </section>
 
     <!-- SECTION 4 PHONE -->
 
-    <section class="section4">
+    <section class="section4" id="pastJobs">
         <h1 class="section4Title">Our Past Jobs</h1>
         <div class="allcont4">
 
@@ -205,20 +225,6 @@
                         class="slider1" />
                     <div class="slider-line1" aria-hidden="true"></div>
                     <div class="slider-button1" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        </svg>
                     </div>
                 </div>
             </main>
@@ -233,20 +239,6 @@
                         class="slider2" />
                     <div class="slider-line2" aria-hidden="true"></div>
                     <div class="slider-button2" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        </svg>
                     </div>
                 </div>
             </main>
@@ -260,20 +252,7 @@
                         class="slider" />
                     <div class="slider-line" aria-hidden="true"></div>
                     <div class="slider-button" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        </svg>
+                        
                     </div>
                 </div>
             </main>
@@ -289,45 +268,19 @@
                         class="slider3" />
                     <div class="slider-line3" aria-hidden="true"></div>
                     <div class="slider-button3" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        </svg>
+                        
                     </div>
                 </div>
             </main>
         </div>
     </section>
 
-    <section class="section5">
+    <section class="section5" id="locations">
         <h1 class="section5Header">Areas We Service</h1>
         <p class="section5Para">916DumpRuns is a locally owned business based out of Sacramento, CA. But we cover a lot
             more than just the 916.</p>
         <ul class="listOf">
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Sacramento, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Grass Valley, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Roseville, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Elk Grove, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Lincoln, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>El Dorado, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Wilton, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Yuba City, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Folsom, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Rocklin, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Galt, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Davis, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Plumas Lake, CA</li>
-            <li class="listItems"><i class="fa-solid fa-map-pin" style="color: #67BD43;"></i>Rio Oso, CA</li>
+
         </ul>
     </section>
 
@@ -358,7 +311,7 @@
         </div>
     </section>
 
-    <section class="section7">
+    <section class="section7" id="contact">
         <div class="insidesection7">
 
 
@@ -383,25 +336,25 @@
                 </div>
             </div>
 
-            <div class="contactform">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="number" placeholder="Phone Number">
-                <label class="messaegLabel" for="">Message:</label>
-                <textarea placeholder=""></textarea>
-            </div>
+            <form class="contactform" action="https://formspree.io/f/xrgnjvql" method="POST">
+                <input type="email" name="email" placeholder="Email">
+                <input type="number" name="phoneNumber" placeholder="Phone Number">
+                <label class="messaegLabel">Your message:</label>
+                <input class="textarea" name="message"></input>
+                <button class="contactButtonForm" type="submit">Send</button>
+            </form>
         </div>
     </section>
 
     <footer class="footer">
 
-        
+
         <h3 class="footerText">You Call We Haul.</h3>
 
         <div class="socialmedias">
-            <img src="./asstes/images/faceBookLogo.png" onclick="redirectToFacebook()"alt="" class="footer-logo insta">
-            <img src="./asstes/images/instaPng.png" onclick="redirectToInstagram()"alt="" class="footer-logo">
-            <img src="./asstes/images/icons8-tiktok-50.png" onclick="redirectToTikTok()"alt="" class="footer-logo">
+            <img src="./asstes/images/faceBookLogo.png" onclick="redirectToFB()" alt="" class="footer-logo insta">
+            <img src="./asstes/images/instaPng.png" onclick="redirectToInstagram()" alt="" class="footer-logo">
+            <img src="./asstes/images/icons8-tiktok-50.png" onclick="redirectToTikTok()" alt="" class="footer-logo">
 
             <!-- <i class="footer-logo fa-brands fa-instagram" style="color: #000000;" onclick="redirectToInstagram()"></i> -->
             <!-- <i class="footer-logo fa-brands fa-tiktok" style="color: #000000;" onclick="redirectToTikTok()"></i> -->
